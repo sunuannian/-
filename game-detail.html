@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏资讯网</title>
+    <!-- 网页图标 Favicon - 使用 Emoji 图标 -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='70' font-size='70' text-anchor='middle' fill='%2300ff88'>🎮</text></svg>">
+<link rel="icon" type="image/png" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50' y='70' font-size='70' text-anchor='middle' fill='%2300ff88'%3E🎮%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50' y='70' font-size='70' text-anchor='middle' fill='%2300ff88'%3E🎮%3C/text%3E%3C/svg%3E">
+    
+    <!-- 主题预加载脚本 - 必须在 CSS 之前 -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 其他内容 -->
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">🎮 GameNews</a>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="games.html">游戏库</a></li>
+            <li><a href="about.html">关于</a></li>
+        </ul>
+        
+        <!-- 搜索框 -->
+        <div class="search-container" style="position: relative;">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="搜索游戏或资讯..." autocomplete="off">
+                <button id="search-btn">🔍</button>
+            </div>
+            <div id="search-results" class="search-results"></div>
+        </div>
+        
+        <!-- 主题切换按钮 -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="切换主题">🌙</button>
+    </div>
+    </nav>
+
+    <div class="container">
+        <div id="game-detail-container"></div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 GameNews 游戏资讯网 | 仅用于学习练习</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
